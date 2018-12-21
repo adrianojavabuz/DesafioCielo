@@ -1,0 +1,28 @@
+<div class="container">
+
+  
+  <div class="row text-left">
+      <div *ngFor="let extratol of extratos.listaControleLancamento">
+
+          <div class="row text-left" >  
+
+              Data do lancamento | Descricao | Numero | Situacao | Data Confirmacao | Dados bancarios | Valor final
+          </div>
+
+           {{extratol.dataLancamentoContaCorrenteCliente}} | {{extratol.lancamentoContaCorrenteCliente.nomeTipoOperacao}} | 
+          {{extratol.lancamentoContaCorrenteCliente.numeroRemessaBanco}} | 
+          {{extratol.lancamentoContaCorrenteCliente.nomeSituacaoRemessa}} | 
+          {{extratol.dataEfetivaLancamento}} | {{extratol.nomeBanco}} 
+          Ag {{extratol.lancamentoContaCorrenteCliente.dadosDomicilioBancario.numeroAgencia}} 
+          CC {{extratol.lancamentoContaCorrenteCliente.dadosDomicilioBancario.numeroContaCorrente}} | 
+          {{extratol.valorLancamentoRemessa | currency: 'R$'}} 
+          <br><br>
+          <hr>
+      </div>
+    
+
+  </div>
+   
+    
+
+</div>
